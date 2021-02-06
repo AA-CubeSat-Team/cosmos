@@ -1,0 +1,15 @@
+TELEMETRY SENSOR IR_SOH BIG_ENDIAN "IR sensor State of Health"
+  APPEND_ITEM LENGTH 8 UINT "Packet size so COSMOS can read the serial port."
+  APPEND_ID_ITEM PKTID 8 UINT 1 "Packet ID so COSMOS can identify the packet and store it."
+  APPEND_ITEM DELAY 16 UINT "Result x 0.1 sec = Current LED delay value (sec) between LED blinks."
+  APPEND_ITEM IR_VAL 16 UINT "Photocell reading (analog value)."
+
+# A byte stores an 8-bit unsigned number, from 0 to 255.
+
+# On the Arduino Uno (and other ATmega based boards) an int stores a 16-bit (2-byte) value
+# This yields a range of -32,768 to 32,767 
+# (minimum value of -2^15 and a maximum value of (2^15)-1).
+
+# On the Uno and other ATMEGA based boards, unsigned ints (unsigned integers) are the same as 
+# ints in that they store a 2 byte value. Instead of storing negative numbers however they only 
+# store positive values, yielding a useful range of 0 to 65,535 ((2^16)-1).

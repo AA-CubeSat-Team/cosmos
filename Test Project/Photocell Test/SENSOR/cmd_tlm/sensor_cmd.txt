@@ -1,0 +1,2 @@
+COMMAND SENSOR DELAY BIG_ENDIAN "Change how fast to blink the LED"
+  APPEND_PARAMETER DELAY_NUM 16 UINT 1 1024 1 "DELAY_NUM x 100ms = Delay between LED blinks."
