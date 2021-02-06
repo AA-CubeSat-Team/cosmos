@@ -1,2 +1,4 @@
 # Blink test 2 (integer data type)
-Download the " " folder project and store it in your C drive to work.
+Work in progress.
+
+Debugging the issue with the Arduino receiving command (integer data type) from the COSMOS.
