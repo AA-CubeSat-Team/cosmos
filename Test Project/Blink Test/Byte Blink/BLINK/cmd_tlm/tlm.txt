@@ -1,0 +1,4 @@
+TELEMETRY BLINK SOH BIG_ENDIAN "State of health of the blink application."
+  APPEND_ITEM LENGTH 8 UINT "Packet size so COSMOS can read the serial port."
+  APPEND_ID_ITEM PKTID 8 UINT 1 "Packet ID so COSMOS can identify the packet and store it."
+  APPEND_ITEM CURR_DELAY 8 UINT "Result x 0.01 sec = Current delay value (sec) between LED blinks."
